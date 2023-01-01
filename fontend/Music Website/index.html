@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- /* Menu Side */ -->
+        <div class="menu-side">
+            <h1>Playlist</h1>
+            <div class="playlist">
+                <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i> Playlist</h4>
+                <h4><span></span><i class="bi bi-music-note-beamed"></i> Last Listening</h4>
+                <h4><span></span><i class="bi bi-music-note-beamed"></i> recommended</h4>
+            </div>
+            <div class="menu_song"></div>
+        </div>
+
+        <!-- /* Song Side */ -->
+        <div class="song-side">
+            <video width="100%" height="100%" class="video_song" src="" autoplay loop muted></video>
+                <nav>
+                    <ul>
+                        <li>Discover <span></span></li>
+                        <li>My Library</li>
+                        <li>Radio</li>
+                    </ul>
+                    <div class="search">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search Music...">
+                        <div class="search_results">
+                        </div>
+                    </div>
+                    <div class="user">
+                        <img src="https://free4kwallpapers.com/uploads/originals/2022/03/28/anime-landscape-for-desktop-sea-ships-colorful-clouds-scenic-tree-horizon-wallpaper.jpg">
+                    </div>
+                </nav>
+                <div class="content">
+                    <h1 class="contentTitle_music"></h1>
+                    <p class="contentSub_music"></p>          
+                </div>
+    
+                <div class="popular-song">
+                    <div class="h4">
+                        <h4>Popular Song</h4>
+                        <div class="btn_s">
+                            <i class="bi bi-arrow-left-short" id="pop_song_left"></i>
+                            <i class="bi bi-arrow-right-short" id="pop_song_right"></i>
+                        </div>
+                    </div>
+                    <div class="pop_song">
+                    </div>
+                </div>
+        </div>
+
+        <!-- /* Master Play */ -->
+        <div class="master-play">
+            <div class="wave" id="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="" id="pic_music">
+            <h5 id="title">
+                <p id="title_music">Vande mataram</p>
+                <div class="subtitle subtitle_music">Bankim Charda</div>
+            </h5>
+            <div class="icon">
+                <i class="bi shuffle bi-music-note">icon_music</i>
+                <i class="bi bi-skip-start-fill" id="prevbtn"></i>
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-skip-end-fill" id="nextbtn"></i>
+                <a href="" download id="download_music"><i class="bi bi-download"></i></a>
+            </div>
+            <span id="currentStart"></span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" max="100">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
+            </div>
+            <audio id="audio_music" src=""></audio>
+            <span id="currentEnd"></span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+                <input type="range" min="0" max="100" id="vol">
+                <div class="vol_bar"></div>
+                <div class="dot" id="vol_dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

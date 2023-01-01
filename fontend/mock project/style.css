@@ -1,0 +1,214 @@
+:root{
+    --first-color: #03e9f4;
+    --input-color: #80868B;
+    --border-color: #DADCE0;
+
+    --body-font: 'Roboto', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size:.75rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.formContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100hv;
+}
+.formContact #text_codeC{
+    display: none;
+}
+#table-contact a{
+    padding-left: 8px;
+}
+#contacts-form{
+    display: none;
+}
+#contacts-form{
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 15px 15px 0 0;
+}
+#contacts-form .col-6{
+    margin-left: 25%;
+}
+#contacts-form .form_div{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+#contacts-form .form-control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: var(--normal-font-size);
+    border: 1px solid var(--border-color);
+    background: rgb(0, 0, 0, 0.3);
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+#contacts-form .form_label{
+    position: absolute;
+    color: #fff;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 .25rem;
+    pointer-events: none;
+    font-size: var(--normal-font-size);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#contacts-form .form-control:hover ~ .form_label,
+#contacts-form .form-control:focus ~ .form_label{
+    color: var(--first-color);
+    transform: translateX(10px) translateY(-12px);
+    left: .8rem;
+    top: -.01rem;
+    background: #fff;
+    z-index: 10;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+#contacts-form .form-control:hover,
+#contacts-form .form-control:focus{
+    border: 1px solid var(--first-color);
+}
+.formContact .btn-submit{
+    position: relative;
+    display: inline-block;
+    padding: 12px 50px;
+    background: black;
+    border: none;
+    color: #03e9f4;
+    font-size: var(--normal-font-size);
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+.formContact .btn-submit:hover{
+    background: #03e9f4;
+    border: none;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+.formContact .btn-submit span{
+    position: absolute;
+    display: block;
+}
+.formContact .btn-submit span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.formContact .btn-submit span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.formContact .btn-submit span:nth-child(3){
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(-90deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+.formContact .btn-submit span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(-180deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
+.popup {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    bottom: 0;
+    right: 0;
+}
+.popup > form {
+    position: relative;
+}
+.popup.active {
+    display: block;
+}
+.popup_close{
+    width: 40px !important;
+    height: 40px;
+    background-color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
